@@ -1,0 +1,53 @@
+package linkledlist;
+
+public class Add {
+	
+		int data;
+		Node head;
+
+		public void addFirst(int value) {
+			Node newnode =new Node();
+			newnode.data =value;
+			newnode.next =head;
+			head =newnode;
+		}
+		
+		public  void addLast(int value) {
+			Node newnode =new Node();
+			newnode.data =value;
+			newnode.next =null;
+			
+			if(head == null)
+				head=newnode;
+			else {
+				Node lastnode =head;
+				while(lastnode.next !=null) {
+					lastnode = lastnode.next;
+				}
+				lastnode.next = newnode;
+			}
+		}
+		
+		public void print() {
+			Node temp=head;
+			while(temp!=null) {
+				System.out.println(temp.data);
+				temp=temp.next;
+			}
+		}
+		
+		public static void main(String args[]) {
+			Add list =new Add(); 
+			
+			list.addFirst(10);
+			list.addFirst(20);
+			list.addFirst(40);
+			list.addLast(30);
+			list.addLast(25);
+			list.addLast(16);
+			list.addFirst(22);
+			
+			list.print();
+			
+	}
+}
