@@ -2,8 +2,7 @@ package Linked_list;
 
 class Node5{
 	int data;
-	Node5 prev,next;
-	
+	Node5 prev,next;	
 }
 public class Doublydelete {
 	Node5 head;
@@ -49,7 +48,8 @@ public class Doublydelete {
 	public void print(){
 		Node5 temp=head;
 		Node5 last=null;
-		  // Forward
+		
+		  // Forward Traverse
 		while(temp!=null) {
 			System.out.println(temp.data);
 			if(temp.next==null)
@@ -57,7 +57,8 @@ public class Doublydelete {
 			temp=temp.next;
 		} 
 		    System.out.println();
-		   // Backward
+		
+		   // Backward  Traverse
 		temp=last;
 		while(temp!=null) {
 			System.out.println(temp.data);
@@ -74,8 +75,8 @@ public class Doublydelete {
 		list.add(50);
 		list.print();
 		System.out.println();
-		System.out.println("After Delete");
 		
+		System.out.println("After Delete");
 		list.del(20);
 		list.del(40);
 		list.print();
